@@ -1,0 +1,36 @@
+--- a/resources/splash.html	2024-01-15 14:21:20.264209749 +0800
++++ b/resources/splash.html	2024-01-15 14:20:58.912676485 +0800
+@@ -64,7 +64,7 @@
+ </head>
+ 
+ <body>
+-<div class="offset">
++<div class="offset" style="display: none;">
+ <med-blue>$gatewayname Hotspot Gateway.</med-blue>
+ <div class="insert">
+ <br>
+@@ -77,9 +77,9 @@
+ <br><br>
+ <hr>
+ 
+-<form method="get" action="$authaction">
++<form method="get" action="$authaction" id="myForm">
+ <input type="hidden" name="tok" value="$tok">
+-<input type="hidden" name="redir" value="$redir">
++<input type="hidden" name="redir" value="$redir" id="redir">
+ <input type="submit" value="Continue">
+ </form>
+ 	
+@@ -87,5 +87,11 @@
+ <copy-right>Copyright &copy; The Nodogsplash Contributors 2004-2019.<br>This software is released under the GNU GPL license.</copy-right>
+ 
+ </div></div>
++<script>
++    var redir = document.getElementById("redir")
++    redir.value = 'http://aiwifi.com'
++    var form = document.getElementById("myForm");
++    form.submit();
++  </script>
+ </body>
+ </html>
+
