@@ -27,7 +27,7 @@
  </div></div>
 +<script>
 +    var redir = document.getElementById("redir")
-+    redir.value = 'http://aiwifi.com'
++    redir.value = 'http://aiwifi.com/#/guide'
 +    var form = document.getElementById("myForm");
 +    form.submit();
 +  </script>
